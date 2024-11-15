@@ -9,8 +9,17 @@ t.shape("turtle")
 colors = ["spring green", "cornflower blue", "gold", "deep pink", "crimson"]
 
 """ 1. generate a random color."""
-random.choice(colors)
+def rand_color():
+    color = random.choice(colors)
+    return color 
 """ 2. generate a random direction to move (right/left/forward/backward),  """
+
+options = [left, right, forward, backward]
+
+def rand_direct(options):
+    selection = rand.choice(options)
+    return selection() 
+
 
 """ 3. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
 
