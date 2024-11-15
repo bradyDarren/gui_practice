@@ -1,6 +1,7 @@
 # will make our turtle icon generate a random path to walk, while changing color and thickness of the paths as a different direction is taken. 
 
 from turtle import Turtle, Screen
+import random
 
 t = Turtle()
 t.color("green")
@@ -14,17 +15,17 @@ def rand_color():
     return color 
 """ 2. generate a random direction to move (right/left/forward/backward),  """
 
-options = [left, right, forward, backward]
+options = [Turtle.left, Turtle.right, Turtle.forward, Turtle.backward]
 
-def rand_direct(options):
-    selection = rand.choice(options)
-    return selection() 
+def rand_direct(options, steps):
+    selection = random.choice(options)
+    return selection(steps) 
 
+a = rand_direct(options, 5)
+
+t.a
 
 """ 3. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
-
-
-
 
 screen = Screen()
 screen.exitonclick()
