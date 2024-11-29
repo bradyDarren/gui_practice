@@ -5,9 +5,7 @@ import random
 
 t = Turtle()
 t.color("green")
-print(t.shape())
 t.shape("turtle")
-print(t.shape())
 
 # colors = ["spring green", "cornflower blue", "gold", "deep pink", "crimson"]
 
@@ -15,6 +13,7 @@ print(t.shape())
 # def rand_color():
 #     color = random.choice(colors)
 #     return color 
+
 # """ 2. generate a random direction to move (right/left/forward/backward),  """
 
 # # options = [, Turtle.right, Turtle.forward, Turtle.backward]
