@@ -23,14 +23,14 @@ class Directions:
     def right(self):
         self.name.right(90)
 
-    def left(self, name):
-        name.left(90)
+    def left(self):
+        self.name.left(90)
 
-    def forward(self, name):
-        name.forward(200)
+    def forward(self):
+        self.name.forward(200)
 
-    def backward(self, name):
-        name.backward(200)
+    def backward(self):
+        self.name.backward(200)
 
 """ 2. generate a random direction to move (right/left/forward/backward),  """
 class RandDirection:
