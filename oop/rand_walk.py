@@ -44,6 +44,6 @@ class RandDirection:
 
 
 """test line for the scren display"""
-screen = Screen()
-screen.exitonclick()
+# screen = Screen()
+# screen.exitonclick()
 
