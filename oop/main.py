@@ -1,5 +1,6 @@
 from turtle import Turtle, Screen
 from icon import Icon
+from rand_walk import
 import random 
 
 icon_name = input("Input the desired name of you icon: ")
@@ -12,6 +13,8 @@ user_icon.name = Turtle()
 
 user_icon.name.shape(icon_shape)
 user_icon.name.color(icon_color)
+
+
 
 screen = Screen()
 screen.exitonclick()
