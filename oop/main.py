@@ -16,13 +16,14 @@ user_icon.name = Turtle()
 user_icon.name.shape(icon_shape)
 user_icon.name.color(icon_color)
 
+user_icon.name.speed(1)
+
 # user_icon.name.right(90)
 
 path = RandDirection(user_icon.name)
 
-for _ in range(200):
+for _ in range(50):
    path.rand_direct()
-
 
 screen = Screen()
 screen.exitonclick()
