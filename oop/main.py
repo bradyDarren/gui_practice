@@ -22,7 +22,7 @@ user_icon.name.speed(1)
 
 path = RandDirection(user_icon.name)
 
-for _ in range(50):
+for _ in range(250):
    path.rand_direct()
 
 screen = Screen()
