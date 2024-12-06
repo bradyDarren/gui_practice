@@ -47,7 +47,7 @@ class RandDirection:
         Only 'forward' or 'backward' are allowed as the subsequent options. """
         while True:
             selection = random.choice(self.options)
-            if prev_selection in [self.right, self.left] or selection in [self.right, self.left]:
+            if prev_selection in [self.right, self.left] and selection in [self.right, self.left]:
                 continue
 
             prev_selection = selection    
