@@ -47,12 +47,11 @@ class RandDirection:
         Only 'forward' or 'backward' are allowed as the subsequent options. """
         while True:
             selection = random.choice(self.options)
-            if prev_selection == self.options[0] or prev_selection == self.options[1]:
-                prev_selection = selection
+            if prev_selection in [self.right, self.left] or selection in [self.right, self.left]:
                 continue
-            else:
-                prev_selection = selection    
-                return selection()
+
+            prev_selection = selection    
+            return selection()
 
 """ 3. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
 
