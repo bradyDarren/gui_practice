@@ -16,8 +16,15 @@ class Colors:
         color = random.choice(self.color_choice)
         return color 
 
+""" 2. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
+class Line: 
+    line = .5
+
+    def incwidth(width):
+        for _ in range(11):
+            
 """function created to make sure we account for each directional movement passed into our turtle object."""
-""" 2. generate a random direction to move (right/left/forward/backward),  """
+""" 3. generate a random direction to move (right/left/forward/backward),  """
 class RandDirection:
 
     def __init__(self, turtle):
@@ -52,9 +59,6 @@ class RandDirection:
 
             prev_selection = selection    
             return selection()
-
-""" 3. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
-
 
 """test line for the scren display"""
 # screen = Screen()
