@@ -17,13 +17,16 @@ class Colors:
         return color 
 
 """ 2. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
-class Line: 
-    line = .5
-
-    def incwidth(width):
-        for _ in range(11):
-            
 """function created to make sure we account for each directional movement passed into our turtle object."""
+class Line: 
+
+    linesize = 10
+
+    def thickness(self):
+        for _ in range(self.linesize + 1):
+            line_thickness = self.linesize - .5
+            return line_thickness
+
 """ 3. generate a random direction to move (right/left/forward/backward),  """
 class RandDirection:
 
