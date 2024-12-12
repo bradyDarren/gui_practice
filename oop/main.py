@@ -26,6 +26,7 @@ colors = Colors()
 
 for _ in range(250):
     path.rand_direct()
+    user_icon.name.forward(25)
     user_icon.name.color(colors.rand_color())
     user_icon.name.pensize(line.thickness())
 
