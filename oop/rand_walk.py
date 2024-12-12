@@ -27,8 +27,6 @@ class Line:
         else: 
             return self.linesize
 
-        
-
 
 """ 3. generate a random direction to move (right/left/forward/backward),  """
 """function created to make sure we account for each directional movement passed into our turtle object."""
