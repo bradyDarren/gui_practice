@@ -42,10 +42,10 @@ class RandDirection:
         self.turtle.setheading(180)
 
     def east(self):
-        self.turtle.forward(90)
+        self.turtle.setheading(90)
 
     def west(self):
-        self.turtle.backward(270)
+        self.turtle.setheading(270)
             
     def rand_direct(self):
         self.options = [
@@ -54,16 +54,12 @@ class RandDirection:
             self.east,
             self.west
         ]
-        prev_selection = None
+        # prev_selection = None
         """ The function is designed to ensure that if 'left' is selected, the next choice cannot be 'right' or 'left' again.
         Only 'forward' or 'backward' are allowed as the subsequent options. """
-        while True:
-            selection = random.choice(self.options)
-            if prev_selection in [self.north, self.south] and selection in [self.north, self.south]:
-                continue
-
-            prev_selection = selection    
-            return selection()
+        selection = random.choice(self.options)
+        return selection()
+    
 
 """test line for the scren display"""
 # screen = Screen()
