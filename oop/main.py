@@ -22,10 +22,13 @@ user_icon.name.speed(1)
 
 path = RandDirection(user_icon.name)
 line = Line()
+colors = Colors()
 
 for _ in range(250):
-    user_icon.name.width()
     path.rand_direct()
+    user_icon.name.color(colors.rand_color())
+    user_icon.name.pensize(line.thickness())
+
 
 
 screen = Screen()
