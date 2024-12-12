@@ -8,7 +8,7 @@ import random
 # t.shape("turtle")
 
 
-""" 1. generate a random color."""
+""" 1. generate a random color. Enabling us to change the color of our line with each move."""
 class Colors:
     color_choice = ["spring green", "cornflower blue", "gold", "deep pink", "crimson"]
 
@@ -16,18 +16,23 @@ class Colors:
         color = random.choice(self.color_choice)
         return color 
 
-""" 2. Increase line thickness as each move is made. As well as change color of the line as each move is made. """
-"""function created to make sure we account for each directional movement passed into our turtle object."""
+""" 2. Increase line thickness as each move is made."""
 class Line: 
 
-    linesize = 10
+    linesize = .5
 
     def thickness(self):
-        for _ in range(self.linesize + 1):
-            line_thickness = self.linesize - .5
-            return line_thickness
+        if self.linesize < 20:
+            self.linesize += .2
+            return self.linesize
+        else: 
+            return self.linesize
+
+        
+
 
 """ 3. generate a random direction to move (right/left/forward/backward),  """
+"""function created to make sure we account for each directional movement passed into our turtle object."""
 class RandDirection:
 
     def __init__(self, turtle):
