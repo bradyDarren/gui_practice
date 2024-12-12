@@ -7,7 +7,6 @@ import random
 # t.color("green")
 # t.shape("turtle")
 
-
 """ 1. generate a random color. Enabling us to change the color of our line with each move."""
 class Colors:
     color_choice = ["spring green", "cornflower blue", "gold", "deep pink", "crimson"]
