@@ -16,7 +16,7 @@ user_icon.name = Turtle()
 user_icon.name.shape(icon_shape)
 user_icon.name.color(icon_color)
 
-user_icon.name.speed(15)
+user_icon.name.speed(10)
 
 # user_icon.name.right(90)
 
