@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen
+import turtle
 from icon import Icon
 from rand_walk import Colors, RandDirection, Line
 
@@ -10,7 +10,7 @@ icon_shape = input("Input the desired shape of your icon (arrow/turtle/circle/sq
 user_icon = Icon(icon_name, icon_color, icon_shape)
 
 """assigning the user input for name and assigning it to a Turtle() object."""
-user_icon.name = Turtle()
+user_icon.name = turtle.Turtle()
 
 """passing in the user input to designate the shape and color of our Turle() object. """
 user_icon.name.shape(icon_shape)
@@ -24,13 +24,13 @@ path = RandDirection(user_icon.name)
 line = Line()
 colors = Colors()
 
+turtle.colormode(255)
+
 for _ in range(250):
     path.rand_direct()
     user_icon.name.forward(25)
-    user_icon.name.color(colors.rand_color())
+    user_icon.name.pencolor(colors.rand_color())
     user_icon.name.pensize(line.thickness())
 
-
-
-screen = Screen()
+screen = turtle.Screen()
 screen.exitonclick()
