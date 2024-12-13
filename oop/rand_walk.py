@@ -9,11 +9,13 @@ import random
 
 """ 1. generate a random color. Enabling us to change the color of our line with each move."""
 class Colors:
-    color_choice = ["spring green", "cornflower blue", "gold", "deep pink", "crimson"]
 
     def rand_color(self):
-        color = random.choice(self.color_choice)
-        return color 
+        red = random.randint(0,255)
+        blue = random.randint(0,255)
+        green = random.randint(0,255)
+        random_color = (red,blue,green)
+        return random_color
 
 """ 2. Increase line thickness as each move is made."""
 class Line: 
