@@ -13,15 +13,18 @@ def rand_color():
     random_color = (red,blue,green)
     return random_color     
 
-def change_position(): 
+def change_position(desired_increase): 
     current_pos = tim.heading()
-    tim.setheading(current_pos + 10)
+    tim.setheading(current_pos + desired_increase)
 
-for _ in range(200): 
-    tim.color(rand_color())
-    tim.circle(100,360,200)
-    change_position()
+def draw(gap_size):
+    for _ in range(int(360/gap_size)): 
+        tim.color(rand_color())
+        tim.circle(100,360,200)
+        change_position(gap_size)
     
+
+draw(1) 
 
 
 screen = t.Screen()
